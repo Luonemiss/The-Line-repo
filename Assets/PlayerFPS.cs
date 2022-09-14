@@ -39,6 +39,8 @@ public class PlayerFPS : MonoBehaviour
     {
         //Cache le curseur de la souris
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         characterController = GetComponent<CharacterController>();  
     }
  
@@ -142,6 +144,9 @@ public class PlayerFPS : MonoBehaviour
         //Input.GetAxis("Mouse X") = mouvement de la souris gauche/droite
         //Applique la rotation gauche/droite sur le Player
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
+        
     }
 }
+
+
 
