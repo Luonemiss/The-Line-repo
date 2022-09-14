@@ -26,11 +26,13 @@ public class Interactor : MonoBehaviour
 
         if (Physics.Raycast(playerCamera.transform.position,playerCamera.transform.forward, out hit, 2, interactableLayermask))
         {
-            if(ReferenceDernierObjet != hit.collider.gameObject){
+        
                 ReferenceDernierObjet = hit.collider.gameObject;
+                Debug.Log(ReferenceDernierObjet.name);
                 ReferenceDernierObjet.GetComponent<ObjetInteractible>().IsTouched = true;
 
-            }
+            
+            //if(ReferenceDernierObjet != hit.collider.gameObject){}
 
 
             
