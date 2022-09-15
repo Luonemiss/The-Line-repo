@@ -9,8 +9,13 @@ public class MenuScript : MonoBehaviour
     public string LevelToLoad;
     public GameObject LesCredits;
 
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     public void Start(){
         LesCredits.SetActive(false);
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
 
     public void Retour(){
