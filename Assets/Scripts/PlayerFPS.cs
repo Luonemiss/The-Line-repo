@@ -14,10 +14,10 @@ public class PlayerFPS : MonoBehaviour
     public float walkingSpeed = 7.5f;
  
     //Vitesse de course
-    public float runningSpeed = 15f;
+    public float runningSpeed = 0;
  
     //Vitesse de saut
-    public float jumpSpeed = 8f;
+    public float jumpSpeed = 0;
  
     //Gravité
     float gravity = 20f;
