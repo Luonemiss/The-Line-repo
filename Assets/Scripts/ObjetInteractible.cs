@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjetInteractible : MonoBehaviour
 {
     public bool IsTouched = false;
+    public GameObject Screen;
  
     //public transform enfant;
     // Start is called before the first frame update
@@ -29,6 +30,11 @@ public class ObjetInteractible : MonoBehaviour
             if (Input.GetMouseButtonDown(0)) {
             //Debug.Log("la souris");
             transform.GetChild(2).gameObject.SetActive(false);
+            this.GetComponent<Collider>().enabled=false;
+
+            if(Screen != null){
+                Screen.SetActive(true);
+            }
 
 
                 if(this.GetComponent<NPCPath>() != null){
