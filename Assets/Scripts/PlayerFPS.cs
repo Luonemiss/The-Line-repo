@@ -38,8 +38,9 @@ public class PlayerFPS : MonoBehaviour
     void Start()
     {
         //Cache le curseur de la souris
-        Cursor.visible = false;
+        //Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        
 
         characterController = GetComponent<CharacterController>();  
     }

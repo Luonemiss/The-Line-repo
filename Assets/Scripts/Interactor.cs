@@ -12,6 +12,8 @@ public class Interactor : MonoBehaviour
 
     private GameObject ReferenceDernierObjet;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class Interactor : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(playerCamera.transform.position,playerCamera.transform.forward, out hit, 5, interactableLayermask))
+        if (Physics.Raycast(playerCamera.transform.position,playerCamera.transform.forward, out hit, 8, interactableLayermask))
         {
             if(ReferenceDernierObjet != hit.collider.gameObject)
             {
