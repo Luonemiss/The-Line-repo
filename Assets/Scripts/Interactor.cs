@@ -24,7 +24,7 @@ public class Interactor : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(playerCamera.transform.position,playerCamera.transform.forward, out hit, 2, interactableLayermask))
+        if (Physics.Raycast(playerCamera.transform.position,playerCamera.transform.forward, out hit, 5, interactableLayermask))
         {
             if(ReferenceDernierObjet != hit.collider.gameObject)
             {

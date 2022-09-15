@@ -117,8 +117,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 10
-  damping: 2
+  speed: 2
+  damping: 6
 --- !u!54 &732750435960068145
 Rigidbody:
   m_ObjectHideFlags: 0

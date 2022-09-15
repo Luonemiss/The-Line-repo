@@ -16,11 +16,17 @@ public class ObjetInteractible : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(IsTouched){
             transform.GetChild(0).gameObject.SetActive(true);
             /*if(transform.GetChild(0).gameObject.activeSelf){
                 transform.GetChild(0).gameObject.SetActive(true);
             }*/
+            if (Input.GetMouseButtonDown(0)) {
+            Debug.Log("la souris");
+            this.GetComponent<NPCPath>().enabled=true;
+            this.GetComponent<RoombatPath>().enabled=true;
+            }
         } else{
             transform.GetChild(0).gameObject.SetActive(false);
             /*if(!transform.GetChild(0).gameObject.activeSelf){
