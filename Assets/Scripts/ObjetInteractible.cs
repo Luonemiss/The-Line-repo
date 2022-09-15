@@ -28,9 +28,12 @@ public class ObjetInteractible : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0)) {
             //Debug.Log("la souris");
+            transform.GetChild(2).gameObject.SetActive(false);
+
 
                 if(this.GetComponent<NPCPath>() != null){
                     this.GetComponent<NPCPath>().enabled=true;
+                    
                 }
 
                 if(this.GetComponent<RoombatPath>() != null){
