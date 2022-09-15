@@ -14,9 +14,9 @@ public class NPCPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(current);
+        /*Debug.Log(current);
         Debug.Log("position du NPC" + transform.position);
-        Debug.Log("position de la target" + target[current].position);
+        Debug.Log("position de la target" + target[current].position);*/
 
         if(transform.position != target[current].position){
 
