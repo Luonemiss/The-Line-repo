@@ -15118,7 +15118,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 23467567955153530, guid: 6099aa6af0a90e64983b0d35584c9fcc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 174938324224723728, guid: 6099aa6af0a90e64983b0d35584c9fcc, type: 3}
       propertyPath: m_RootOrder
@@ -15203,6 +15203,10 @@ PrefabInstance:
     - target: {fileID: 1157548382402067609, guid: 6099aa6af0a90e64983b0d35584c9fcc, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192085047514432432, guid: 6099aa6af0a90e64983b0d35584c9fcc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8154790543493950750, guid: 6099aa6af0a90e64983b0d35584c9fcc, type: 3}
       propertyPath: m_IsActive
