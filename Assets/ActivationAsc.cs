@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ActivationAsc : MonoBehaviour
 {
-    public bool IsTouched;
     // Start is called before the first frame update
     void Start()
     {

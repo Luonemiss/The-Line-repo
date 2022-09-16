@@ -9,6 +9,7 @@ public class ObjetInteractible : MonoBehaviour
     public GameObject Screen;
     public GameObject PorteAsc;
     public GameObject ImgEndFade;
+    public GameObject SoundBroken;
     public bool DoorClosed;
     float transitionTime = 2f;
  
@@ -44,6 +45,14 @@ public class ObjetInteractible : MonoBehaviour
 
             if(Screen != null){
                 Screen.SetActive(true);
+            }
+
+            if(Screen != SoundBroken){
+                SoundBroken.SetActive(false);
+            }
+
+            if(this.GetComponent<AudioSource>() != null){
+                this.GetComponent<AudioSource>().enabled=true;
             }
 
 
