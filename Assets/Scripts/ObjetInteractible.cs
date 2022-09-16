@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjetInteractible : MonoBehaviour
 {
     public bool IsTouched = false;
     public GameObject Screen;
+    public GameObject PorteAsc;
+    public GameObject ImgEndFade;
+    public bool DoorClosed;
+    float transitionTime = 2f;
  
     //public transform enfant;
     // Start is called before the first frame update
@@ -32,6 +37,11 @@ public class ObjetInteractible : MonoBehaviour
             transform.GetChild(2).gameObject.SetActive(false);
             this.GetComponent<Collider>().enabled=false;
 
+            if(PorteAsc != null){
+                PorteAsc.GetComponent<ActivationAsc>().CloseDoor();
+                DoorClosed = true;
+            }
+
             if(Screen != null){
                 Screen.SetActive(true);
             }
@@ -54,6 +64,25 @@ public class ObjetInteractible : MonoBehaviour
                 transform.GetChild(0).gameObject.SetActive(false);
             }*/
         }
+
+        if(DoorClosed){
+            StartCoroutine(LoadLevel("Menu"));
+        }
+
+    }
+
+    IEnumerator LoadLevel( string nomScene){
+        //jouer l'animation 
+            if(ImgEndFade != null){
+                ImgEndFade.SetActive(true);
+                ImgEndFade.GetComponent<Animator>().Play("EndAnimation");
+            }
+
+            //att
+            yield return new WaitForSeconds(transitionTime);
+
+            //lancer la scène
+            SceneManager.LoadScene(nomScene);
 
     }
 }
